@@ -3,10 +3,6 @@ from tkinter import ttk
 import random
 from algorithms import bubble_sort_visual, selection_sort_visual, insertion_sort_visual, merge_sort_visual, quick_sort_visual
 
-#====================================================================
-# Haneen's Task: GUI Design and Integration
-#====================================================================
-
 class SortingVisualizerGUI:
     def __init__(self, root):
         self.root = root
@@ -37,7 +33,7 @@ class SortingVisualizerGUI:
         self.algo_menu.pack(side=tk.LEFT, padx=5)
         self.algo_menu.set("Quick Sort")
 
-        # Slider lel Array Size (Features mn code 2)
+        # Slider lel Array Size
         tk.Label(self.control_frame, text="Size:", fg="white", bg="#2D2D2D", font=("Arial", 11, "bold")).pack(side=tk.LEFT, padx=5)
         self.size_slider = tk.Scale(self.control_frame, from_=10, to=120, orient=tk.HORIZONTAL, bg="#2D2D2D", fg="white", highlightthickness=0, width=10, length=120)
         self.size_slider.pack(side=tk.LEFT, padx=5)
@@ -49,7 +45,7 @@ class SortingVisualizerGUI:
         self.speed_slider.pack(side=tk.LEFT, padx=5)
         self.speed_slider.set(0.02)
 
-        # Buttons (Custom Padding & Colors)
+        # Buttons
         self.btn_gen = tk.Button(self.control_frame, text="Generate", command=self.generate_array, bg="#4A4A4A", fg="white", font=("Arial", 10, "bold"), relief=tk.FLAT, width=10)
         self.btn_gen.pack(side=tk.LEFT, padx=10)
 
@@ -57,18 +53,18 @@ class SortingVisualizerGUI:
         self.btn_start.pack(side=tk.LEFT, padx=5)
 
     def _build_legend(self):
-        """ Legend Framework mn code 2 3ashan t-bayan ma3na el alwan """
+        """ Mtzabata 3ashan t-match koll alwan algorithms.py sa7 """
         legend_frame = tk.Frame(self.root, bg="#2D2D2D")
         legend_frame.pack(pady=5)
 
-        tk.Label(legend_frame, text="■ Unsorted / Context", fg="#3498DB", bg="#2D2D2D", font=("Arial", 10, "bold")).grid(row=0, column=0, padx=15)
-        tk.Label(legend_frame, text="■ Active Comparison", fg="#F1C40F", bg="#2D2D2D", font=("Arial", 10, "bold")).grid(row=0, column=1, padx=15)
-        tk.Label(legend_frame, text="■ Swap / Current Target", fg="#E74C3C", bg="#2D2D2D", font=("Arial", 10, "bold")).grid(row=0, column=2, padx=15)
-        tk.Label(legend_frame, text="■ Sorted Block", fg="#2ECC71", bg="#2D2D2D", font=("Arial", 10, "bold")).grid(row=0, column=3, padx=15)
+        tk.Label(legend_frame, text="■ Unsorted Base", fg="#3498DB", bg="#2D2D2D", font=("Arial", 10, "bold")).grid(row=0, column=0, padx=15)
+        tk.Label(legend_frame, text="■ Scan / Compare", fg="#F1C40F", bg="#2D2D2D", font=("Arial", 10, "bold")).grid(row=0, column=1, padx=15)
+        tk.Label(legend_frame, text="■ Pivot / Min Found", fg="#E74C3C", bg="#2D2D2D", font=("Arial", 10, "bold")).grid(row=0, column=2, padx=15)
+        tk.Label(legend_frame, text="■ Sub-Array Range / Boundary", fg="#9B59B6", bg="#2D2D2D", font=("Arial", 10, "bold")).grid(row=0, column=3, padx=15)
+        tk.Label(legend_frame, text="■ Sorted / Swapped Block", fg="#2ECC71", bg="#2D2D2D", font=("Arial", 10, "bold")).grid(row=0, column=4, padx=15)
 
     def generate_array(self):
         size = self.size_slider.get()
-        # Generate generic numbers inside the dynamic scale range
         self.data = [random.randint(10, 430) for _ in range(size)]
         self.update_screen(self.data)
         self._toggle_buttons(state=tk.NORMAL)
@@ -79,11 +75,9 @@ class SortingVisualizerGUI:
         c_width = 1060
         bar_width = c_width / len(current_array)
         
-        # Safe Normalization check line to prevent division by zero
         max_val = max(current_array) if len(current_array) > 0 else 1
         
         for i, val in enumerate(current_array):
-            # Normalization algorithm implementation from code 2
             normalized_height = (val / max_val) * 420
             
             x0 = i * bar_width + 2
