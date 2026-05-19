@@ -3,7 +3,11 @@ import random
 import os
 import matplotlib.pyplot as plt
 
-# Algorithms safy mn gher GUI callbacks 3ashan el profiling sa7
+#====================================================================
+# Fady's Task: Benchmarking Engine for Sorting Algorithms
+#====================================================================
+
+# Algorithms safy mn gher GUI callbacks 3ashan el profiling sah
 def bubble_sort(arr):
     n = len(arr)
     for i in range(n):

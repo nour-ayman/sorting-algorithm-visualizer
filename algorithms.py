@@ -46,7 +46,7 @@ def selection_sort_visual(array, draw_callback, delay):
 # 2. INTERMEDIATE ALGORITHMS
 # =====================================================================
 def insertion_sort_visual(array, draw_callback, delay):
-    """ Member 3 Task: Insertion Sort """
+    """ Ibrahim's Task: Insertion Sort """
     for i in range(1, len(array)):
         key = array[i]
         j = i - 1
@@ -70,7 +70,7 @@ def insertion_sort_visual(array, draw_callback, delay):
 
 
 def merge_sort_visual(array, draw_callback, delay):
-    """ Member 3 Task: Merge Sort (Divide & Conquer) """
+    """ Ibrahim's Task: Merge Sort (Divide & Conquer) """
     
     def _merge_sort(start, end):
         if start < end:
@@ -121,7 +121,7 @@ def merge_sort_visual(array, draw_callback, delay):
 # =====================================================================
 
 def quick_sort_visual(array, draw_callback, delay):
-    """ Member 4 Task: Quick Sort (Divide & Conquer) """
+    """ Wezza's Task: Quick Sort (Divide & Conquer) """
     def _quick_sort(low, high):
         if low < high:
             pivot_idx = partition(low, high)
@@ -152,7 +152,7 @@ def quick_sort_visual(array, draw_callback, delay):
     draw_callback(array, color_map={x: "green" for x in range(len(array))})
 
 # ==========================================
-# MEMBER 4: Quick Sort Logic 
+# wezza M4: Quick Sort Logic 
 # ==========================================
 def quick_sort_visual(array, draw_callback, delay):
     def _quick_sort(low, high):

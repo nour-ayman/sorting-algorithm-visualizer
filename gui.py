@@ -3,6 +3,10 @@ from tkinter import ttk
 import random
 from algorithms import bubble_sort_visual, selection_sort_visual, insertion_sort_visual, merge_sort_visual, quick_sort_visual
 
+#====================================================================
+# Haneen's Task: GUI Design and Integration
+#====================================================================
+
 class SortingVisualizerGUI:
     def __init__(self, root):
         self.root = root
