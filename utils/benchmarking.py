@@ -79,8 +79,8 @@ def quick_sort(arr):
 
 # --- THE BENCHMARKING ENGINE ---
 def run_benchmark():
-    # Sizes bto3 el arrays elly han-test 3aleeha (mn 100 le 1500 element)
-    sizes = [100, 300, 500, 700, 1000, 1300, 1500]
+    # Sizes bto3 el arrays elly han-test 3aleeha (mn 100 le 3000 element)
+    sizes = [100, 500, 1000, 1800, 2500, 3000]
     
     # Dictionaries n-save gowaha el runtimes
     runtimes = {
