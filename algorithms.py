@@ -117,7 +117,7 @@ def merge_sort_visual(array, draw_callback, delay):
     draw_callback(array, color_map={x: "green" for x in range(len(array))})
 
 # =====================================================================
-# 3. ADVANCED ALGORITHMS (Your Main Part)
+# 3. ADVANCED ALGORITHMS 
 # =====================================================================
 
 def quick_sort_visual(array, draw_callback, delay):
@@ -133,41 +133,8 @@ def quick_sort_visual(array, draw_callback, delay):
         i = low - 1
         
         for j in range(low, high):
-            # Highlight tracking element (yellow) and pivot (red)
+            # Highlight tracking element (yellow), pivot (red), and boundary boundary i (purple)
             draw_callback(array, color_map={j: "yellow", high: "red", i: "purple"})
-            time.sleep(delay)
-            
-            if array[j] < pivot:
-                i += 1
-                array[i], array[j] = array[j], array[i]
-                draw_callback(array, color_map={i: "green", j: "yellow", high: "red"})
-                time.sleep(delay)
-                
-        array[i + 1], array[high] = array[high], array[i + 1]
-        draw_callback(array, color_map={i + 1: "green", high: "purple"})
-        time.sleep(delay)
-        return i + 1
-
-    _quick_sort(0, len(array) - 1)
-    draw_callback(array, color_map={x: "green" for x in range(len(array))})
-
-# ==========================================
-# wezza M4: Quick Sort Logic 
-# ==========================================
-def quick_sort_visual(array, draw_callback, delay):
-    def _quick_sort(low, high):
-        if low < high:
-            pivot_idx = partition(low, high)
-            _quick_sort(low, pivot_idx - 1)
-            _quick_sort(pivot_idx + 1, high)
-
-    def partition(low, high):
-        pivot = array[high]
-        i = low - 1
-        
-        for j in range(low, high):
-            # Highlight current tracking element (yellow) and pivot (red)
-            draw_callback(array, color_map={j: "yellow", high: "red", i: "green"})
             time.sleep(delay)
             
             if array[j] < pivot:
