@@ -24,16 +24,16 @@ Project/
 
 The application visualizes 5 core sorting algorithms, divided by their algorithmic complexity and paradigm:
 
-## 1. Basic Algorithms ($O(n^2)$)
+## 1. Basic Algorithms ( $O(n^2)$ )
 * **Bubble Sort**: A simple comparison-based algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order.
 * **Selection Sort**: Divides the array into sorted and unsorted parts, repeatedly finds the minimum element from the unsorted part, and puts it at the beginning.
 
 ## 2. Intermediate Algorithms
-* **Insertion Sort ($O(n^2)$)**: Builds the final sorted array one item at a time by inserting elements into their proper position relative to the already-sorted elements.
-* **Merge Sort ($O(n \log n)$)**: A classic Divide and Conquer algorithm. It divides the input array into two halves, calls itself for the two halves, and then merges the two sorted halves.
+* **Insertion Sort ( $O(n^2)$ )**: Builds the final sorted array one item at a time by inserting elements into their proper position relative to the already-sorted elements.
+* **Merge Sort ( $O(n \log n)$ )**: A classic Divide and Conquer algorithm. It divides the input array into two halves, calls itself for the two halves, and then merges the two sorted halves.
 
 ## 3. Advanced Algorithms
-* **Quick Sort ($O(n \log n)$)**: Another Divide and Conquer powerhouse. It picks an element as a pivot and partitions the given array around the picked pivot so that smaller elements go left and larger ones go right.
+* **Quick Sort ( $O(n \log n)$ )**: Another Divide and Conquer powerhouse. It picks an element as a pivot and partitions the given array around the picked pivot so that smaller elements go left and larger ones go right.
 
 ---
 
