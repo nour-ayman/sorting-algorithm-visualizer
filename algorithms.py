@@ -4,7 +4,7 @@ import time
 # 1. BASIC ALGORITHMS 
 # =====================================================================
 def bubble_sort_visual(array, draw_callback, delay):
-    """ Member 2 Task: Bubble Sort """
+    """ Yasmeen's Task: Bubble Sort """
     n = len(array)
     for i in range(n):
         for j in range(0, n - i - 1):
@@ -23,7 +23,7 @@ def bubble_sort_visual(array, draw_callback, delay):
 
 
 def selection_sort_visual(array, draw_callback, delay):
-    """ Member 2 Task: Selection Sort """
+    """ Yasmeen's Task: Selection Sort """
     n = len(array)
     for i in range(n):
         min_idx = i
