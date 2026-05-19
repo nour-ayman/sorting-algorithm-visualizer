@@ -143,3 +143,20 @@ To profile the sorting performance and generate runtime analysis comparison char
 ```bash
 python utils/benchmarking.py
 ```
+
+
+## Visualization Color Guide
+
+To help trace algorithmic internal state changes, the layout implements the following strict visual language:
+* 🟦 **Blue:** Unsorted base array state / Elements outside the active partition scope.
+* 🟨 **Yellow:** Active comparative element tracking (Elements being scanned/evaluated).
+* 🟥 **Red:** Current localized target context (e.g., Quick-Sort Pivot element or Selection-Sort current minimum index).
+* 🟪 **Purple:** Active operating boundary or sub-array partitioning context (Crucial for Merge Sort division visualization).
+* 🟩 **Green:** Successfully swapped element state or Fully Sorted Array blocks.
+
+## Built With
+
+* **Python 3.13** - Core runtime environment.
+* **Tkinter & TTK** - Lightweight built-in native Desktop GUI rendering engine.
+* **Matplotlib** - Data visualization engine for plotting empirical runtime analysis graphs.
+* **PyInstaller** - Standalone pipeline compilation for automated assembly of production-ready `.exe` releases.
